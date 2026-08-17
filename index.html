@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Générateur d'alpaca</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
+
     <body>
         <h1>Générateur d'alpaca</h1>
 
@@ -21,6 +23,9 @@
                 <img src="alpaca-generator-assets/alpaca/neck/default.png" id="neck" alt="Neck">
                 <img src="" id="accessories" alt="Accessories" style="display:none;">
             </div>
+
+            <button id="random">Aléatoire</button>
+            <button id="download">Télécharger</button>
         </div>
         
         <!-- Boutons pour personnaliser l'alpaca -->
@@ -52,7 +57,147 @@
             <button id="background">Arrière-plan</button>
         </div>
         
+        <!-- Choix du styles pour les différentes parties de l'alpaca -->
+        <div id="styles-section">
+            <h2>Style</h2>
+            
+            <!-- Choix des cheveux -->
+            <div id="styles-hair">
+                <button id="default">Default</button>
+                <button id="bang">Frange</button>
+                <button id="curls">Bouclés</button>
+                <button id="elegant">Élégant</button>
+                <button id="fancy">Sophisitqué</button>
+                <button id="quiff">Banane</button>
+                <button id="short">Court</button>
+            </div>
 
-        <h2>Style</h2>
+            <!-- Choix des oreilles -->
+            <div id="ears-style">
+                <button id="default">Default</button>
+                <button id="tilt-backward">Penché en arrière</button>
+                <button id="tilt-forward">Penché en avant</button>
+            </div>
+
+            <!-- Choix des yeux -->
+            <div id="eyes-style">
+                <button id="default">Default</button>
+                <button id="angry">Colère</button>
+                <button id="naughty">Vilain</button>
+                <button id="panda">Panda</button>
+                <button id="smart">Intelligent</button>
+                <button id="star">Étoiles</button>
+            </div>
+
+            <!-- Choix de la bouche -->
+             <div id="mouth-style">
+                <button id="default">Default</button>
+                <button id="astonished">Étonné</button>
+                <button id="eating">Manger</button>
+                <button id="laugh">Rigoler</button>
+                <button id="tongue">Langue</button>
+             </div>
+
+            <!-- Choix du cou -->
+             <div id="neck-style">
+                <button id="default">Default</button>
+                <button id="bend-backward">Penché en arrière</button>
+                <button id="bend-forward">Penché en avant</button>
+                <button id="thick">Épais</button>
+             </div>
+
+            <!-- Choix de la patte -->
+             <div id="leg-style">
+                <button id="default">Default</button>
+                <button id="bubble-tea">Bubble-tea</button>
+                <button id="cookie">Cookie</button>
+                <button id="game-console">Console de jeu</button>
+                <button id="tilt-backward">Penché en arrière</button>
+                <button id="tilt-forward">Penché en avant</button>
+             </div>
+
+            <!-- Choix des accessoires -->
+             <div id="accessories-style">
+                <button id="earings">Boucles d'oreilles</button>
+                <button id="flower">Fleur</button>
+                <button id="glasses">Lunettes</button>
+                <button id="headphone">Casque</button>
+             </div>
+
+            <!-- Choix de la couleur du fond -->
+             <div id="background-style">
+                <button id="background-style-blue50">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/blue50.png" alt="Bleu 50">
+                </button>
+
+                <button id="background-style-blue60">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/blue60.png" alt="Bleu 60">
+                </button>
+
+                <button id="background-style-blue70">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/blue70.png" alt="Bleu 70">
+                </button>
+
+                <button id="background-style-darkblue30">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/darkblue30.png" alt="Bleu Sombre 30">
+                </button>
+
+                <button id="background-style-darkblue50">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/darkblue50.png" alt="Bleu Sombre 50">
+                </button>
+
+                <button id="background-style-darkblue70">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/darkblue70.png" alt="Bleu Sombre 70">
+                </button>
+
+                <button id="background-style-green50">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/green50.png" alt="Vert 50">
+                </button>
+
+                <button id="background-style-green60">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/green60.png" alt="Vert 60">
+                </button>
+
+                <button id="background-style-green70">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/green70.png" alt="Vert 70">
+                </button>
+
+                <button id="background-style-grey40">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/grey40.png" alt="Gris 40">
+                </button>
+
+                <button id="background-style-grey70">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/grey70.png" alt="Gris 70">
+                </button>
+
+                <button id="background-style-grey80">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/grey80.png" alt="Gris 80">
+                </button>
+
+                <button id="background-style-red50">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/red50.png" alt="Rouge 50">
+                </button>
+
+                <button id="background-style-red60">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/red60.png" alt="Rouge 60">
+                </button>
+
+                <button id="background-style-red70">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/red70.png" alt="Rouge 70">
+                </button>
+
+                <button id="background-style-yellow50">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/yellow50.png" alt="Jaune 50">
+                </button>
+
+                <button id="background-style-yellow60">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/yellow60.png" alt="Jaune 60">
+                </button>
+
+                <button id="background-style-yellow70">
+                    <img src="alpaca-generator-assets/alpaca/backgrounds/yellow70.png" alt="Jaune 70">
+                </button>
+             </div>
+        </div>
     </body>
 </html>
