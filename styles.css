@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* --- Preview section --- */
+#alpaca-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#preview-section {
+    width: 400px;
+    height: 600px;
+
+    position: relative;
+    background-color: #4d5c64;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* --- Styles pour tous les calques(images) à l'intérieur de preview-section --- */
+#preview-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adapte la largeur au conteneur parent.*/
+    height: auto; /* Garde les proportions */
+    object-fit: contain; /* Pour aligner parfaitement les assets transparents s'ils ne sont pas centrés automatiquement par leur éditeur d'image */
+}
+
+#background {
+    z-index: 1; /* Toujours au fond */
+}
+
+#leg, #ears {
+    z-index: 2;
+}
+
+#neck {
+    z-index: 3;
+}
+
+#accessories, #nose {
+    z-index: 4; 
+}
+
+#hair, #mouth {
+    z-index: 5; 
+}
+
+#eyes {
+    z-index: 6; /* Tout en haut */
+}
