@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20;
+    padding: 20px;
 }
 
 h1 {
@@ -48,26 +48,37 @@ h1 {
     object-fit: contain; /* Pour aligner parfaitement les assets transparents s'ils ne sont pas centrés automatiquement par leur éditeur d'image */
 }
 
-#background {
+#img-background {
     z-index: 1; /* Toujours au fond */
 }
 
-#leg, #ears {
+#img-leg, #img-ears {
     z-index: 2;
 }
 
-#neck {
+#img-neck {
     z-index: 3;
 }
 
-#accessories, #nose {
+#img-accessories, #img-nose {
     z-index: 4; 
 }
 
-#hair, #mouth {
+#img-hair, #img-mouth {
     z-index: 5; 
 }
 
-#eyes {
+#img-eyes {
     z-index: 6; /* Tout en haut */
+}
+
+.style-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
 }
