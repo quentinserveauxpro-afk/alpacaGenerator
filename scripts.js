@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const noseImg = document.getElementById('img-nose');
     const mouthImg = document.getElementById('img-mouth');
     const eyesImg = document.getElementById('img-eyes');
-    const earsImg = document.getElementById('img-hair');
-    const hairImg = document.getElementById('img-neck');
-    const neckImg = document.getElementById('img-accessories');
+    const earsImg = document.getElementById('img-ears');
+    const hairImg = document.getElementById('img-hair');
+    const neckImg = document.getElementById('img-neck');
     const accessoriesImg = document.getElementById('img-accessories');
     const randomBtn = document.getElementById('random');
     const downloadBtn = document.getElementById('download');
@@ -67,30 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (image) {
                 console.log("Style choisi", value);
-                let nouvelleSrc = `alpaca-generator-assets/alpaca/${type}/${value}.png`;
-                image.src = nouvelleSrc;
+
+                if (value === 'none') {
+                    image.style.display = 'none';
+                } else {
+                    image.style.display = 'block';
+                    let nouvelleSrc = `alpaca-generator-assets/alpaca/${type}/${value}.png`;
+                    image.src = nouvelleSrc;
+                }
             } else {
                 console.error(`Image avec l'ID 'img-${type} introuvable.`);
             }
         })
     })
-
-    /*function stylesButtons(e) {
-        const bouton = e.target.closest('button[data-type]');
-        if (!bouton) return;
-
-        const type = bouton.dataset.type;
-        const value = bouton.dataset.value;
-
-        // Cible de l'image
-        const image = document.getElementById(`img-${type}`);
-        if (!image) {
-            console.error(`Image introuvable pour la partie "${type}"`);
-            return;
-        }
-
-        // Mettre à jour la source
-        const nouvelleSrc = `alpaca-generator-assets/alpaca/${type}/${value}.png`;
-        image.src = nouvelleSrc;
-    }*/
 });

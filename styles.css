@@ -60,7 +60,7 @@ h1 {
     z-index: 3;
 }
 
-#img-accessories, #img-nose {
+#img-nose {
     z-index: 4; 
 }
 
@@ -68,9 +68,10 @@ h1 {
     z-index: 5; 
 }
 
-#img-eyes {
+#img-eyes, #img-accessories {
     z-index: 6; /* Tout en haut */
 }
+    
 
 .style-panel {
     display: flex;
