@@ -22,19 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vérifier que nous avons bien trouvé des boutons (pour le débogage)
     console.log("Boutons trouvés :", customizationButtons.length);
 
-    // État actuel pour le mode aléatoire (optionnel, mais utile)
-    const currentStyles = {
-        background: 'blue50',
-        leg: 'default',
-        nose: 'nose.png', // Image fixe
-        mouth: 'default',
-        eyes: 'default',
-        ears: 'default',
-        hair: 'default',
-        neck: 'default',
-        accessories:''
-    };
-
     // 1. Gestion de l'affichage des panneaux de style
     customizationButtons.forEach(button => {
         button.addEventListener('click', () => {
