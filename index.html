@@ -3,201 +3,200 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Générateur d'alpaca</title>
+        <title>Générateur d'alpaga</title>
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <h1>Générateur d'alpaca</h1>
+        <h1>Générateur d'alpaga</h1>
 
         <div id="alpaca-container">
             <!-- L'alpaca sera affiché ici -->
             <div id="preview-section">
-                <img src="alpaca-generator-assets/alpaca/backgrounds/blue50.png" id="background" alt="Fond">
-                <img src="alpaca-generator-assets/alpaca/leg/default.png" id="leg" alt="Patte">
-                <img src="alpaca-generator-assets/alpaca/nose.png" id="nose" alt="Nez">
-                <img src="alpaca-generator-assets/alpaca/mouth/default.png" id="mouth" alt="Bouche">
-                <img src="alpaca-generator-assets/alpaca/eyes/default.png" id="eyes" alt="Yeux">
-                <img src="alpaca-generator-assets/alpaca/ears/default.png" id="ears" alt="Oreilles">
-                <img src="alpaca-generator-assets/alpaca/hair/default.png" id="hair" alt="Cheveux">
-                <img src="alpaca-generator-assets/alpaca/neck/default.png" id="neck" alt="Cou">
-                <img src="" id="accessories" alt="Accessoires" style="display:none;">
+                <img src="alpaca-generator-assets/alpaca/backgrounds/blue50.png" id="img-backgrounds" alt="Fond">
+                <img src="alpaca-generator-assets/alpaca/leg/default.png" id="img-leg" alt="Patte">
+                <img src="alpaca-generator-assets/alpaca/nose.png" id="img-nose" alt="Nez">
+                <img src="alpaca-generator-assets/alpaca/mouth/default.png" id="img-mouth" alt="Bouche">
+                <img src="alpaca-generator-assets/alpaca/eyes/default.png" id="img-eyes" alt="Yeux">
+                <img src="alpaca-generator-assets/alpaca/ears/default.png" id="img-ears" alt="Oreilles">
+                <img src="alpaca-generator-assets/alpaca/hair/default.png" id="img-hair" alt="Cheveux">
+                <img src="alpaca-generator-assets/alpaca/neck/default.png" id="img-neck" alt="Cou">
+                <img src="" id="img-accessories">
             </div>
-
-            <button id="random">Aléatoire</button>
-            <button id="download">Télécharger</button>
         </div>
         
         <!-- Boutons pour personnaliser l'alpaca -->
         <div id="customization-buttons">
-            <h2>Personnaliser votre alpaca</h2>
+            <h2>Personnaliser votre alpaga</h2>
 
             <!-- Cheveux -->
-            <button id="hair">Cheveux</button>
+            <button id="hair" class="category-btn">Cheveux</button>
 
             <!-- Oreilles -->
-            <button id="ears">Oreilles</button>
+            <button id="ears" class="category-btn">Oreilles</button>
 
             <!-- Yeux -->
-            <button id="eyes">Yeux</button>
+            <button id="eyes" class="category-btn">Yeux</button>
 
             <!-- Bouche -->
-            <button id="mouth">Bouche</button>
+            <button id="mouth" class="category-btn">Bouche</button>
 
             <!-- Cou -->
-            <button id="neck">Cou</button>
+            <button id="neck" class="category-btn">Cou</button>
 
             <!-- Patte -->
-            <button id="leg">Patte</button>
+            <button id="leg" class="category-btn">Patte</button>
 
             <!-- Accessoires -->
-            <button id="accessory">Accessoires</button>
+            <button id="accessories" class="category-btn">Accessoires</button>
 
             <!-- Arrière-plan -->
-            <button id="background">Arrière-plan</button>
+            <button id="backgrounds" class="category-btn">Arrière-plan</button>
         </div>
         
         <!-- Choix du styles pour les différentes parties de l'alpaca -->
-        <div id="styles-section">
+        <div id="styles-section" class="style-panel hidden">
             <h2>Style</h2>
             
             <!-- Choix des cheveux -->
             <div id="styles-hair" class="style-panel hidden">
-                <button id="hair-default" data-type="hair" data-value="default">Default</button>
-                <button id="hair-bang" data-type="hair" data-value="bang">Frange</button>
-                <button id="hair-curls" data-type="hair" data-value="curls">Bouclés</button>
-                <button id="hair-elegant" data-type="hair" data-value="elegant">Élégant</button>
-                <button id="hair-fancy" data-type="hair" data-value="fancy">Sophisitqué</button>
-                <button id="hair-quiff" data-type="hair" data-value="quiff">Banane</button>
-                <button id="hair-short" data-type="hair" data-value="short">Court</button>
+                <button id="hair-default" class="style-btn" data-type="hair" data-value="default">Default</button>
+                <button id="hair-bang" class="style-btn" data-type="hair" data-value="bang">Frange</button>
+                <button id="hair-curls" class="style-btn" data-type="hair" data-value="curls">Bouclés</button>
+                <button id="hair-elegant" class="style-btn" data-type="hair" data-value="elegant">Élégant</button>
+                <button id="hair-fancy" class="style-btn" data-type="hair" data-value="fancy">Sophisitqué</button>
+                <button id="hair-short" class="style-btn" data-type="hair" data-value="short">Court</button>
             </div>
 
             <!-- Choix des oreilles -->
-            <div id="ears-style" class="style-panel hidden">
-                <button id="ears-default" data-type="ears" data-value="default">Default</button>
-                <button id="ears-tilt-backward" data-type="ears" data-value="tilt-backward">Penché en arrière</button>
-                <button id="ears-tilt-forward" data-type="ears" data-value="tilt-forward">Penché en avant</button>
+            <div id="styles-ears" class="style-panel hidden">
+                <button id="ears-default" class="style-btn" data-type="ears" data-value="default">Default</button>
+                <button id="ears-tilt-backward" class="style-btn" data-type="ears" data-value="tilt-backward">Penché en arrière</button>
+                <button id="ears-tilt-forward" class="style-btn" data-type="ears" data-value="tilt-forward">Penché en avant</button>
             </div>
 
             <!-- Choix des yeux -->
-            <div id="eyes-style" class="style-panel hidden">
-                <button id="eyes-default" data-type="eyes" data-value="default">Default</button>
-                <button id="eyes-angry" data-type="eyes" data-value="angry">Colère</button>
-                <button id="eyes-naughty" data-type="eyes" data-value="naughty">Vilain</button>
-                <button id="eyes-panda" data-type="eyes" data-value="panda">Panda</button>
-                <button id="eyes-smart" data-type="eyes" data-value="smart">Intelligent</button>
-                <button id="eyes-star" data-type="eyes" data-value="star">Étoiles</button>
+            <div id="styles-eyes" class="style-panel hidden">
+                <button id="eyes-default" class="style-btn" data-type="eyes" data-value="default">Default</button>
+                <button id="eyes-angry" class="style-btn" data-type="eyes" data-value="angry">Colère</button>
+                <button id="eyes-naughty" class="style-btn" data-type="eyes" data-value="naughty">Vilain</button>
+                <button id="eyes-panda" class="style-btn" data-type="eyes" data-value="panda">Panda</button>
+                <button id="eyes-smart" class="style-btn" data-type="eyes" data-value="smart">Intelligent</button>
+                <button id="eyes-star" class="style-btn" data-type="eyes" data-value="star">Étoiles</button>
             </div>
 
             <!-- Choix de la bouche -->
-             <div id="mouth-style" class="style-panel hidden">
-                <button id="mouth-default" data-type="mouth" data-value="default">Default</button>
-                <button id="mouth-astonished" data-type="mouth" data-value="astonished">Étonné</button>
-                <button id="mouth-eating" data-type="mouth" data-value="eating">Manger</button>
-                <button id="mouth-laugh" data-type="mouth" data-value="laugh">Rigoler</button>
-                <button id="mouth-tongue" data-type="mouth" data-value="tongue">Langue</button>
+             <div id="styles-mouth" class="style-panel hidden">
+                <button id="mouth-default" class="style-btn" data-type="mouth" data-value="default">Default</button>
+                <button id="mouth-astonished" class="style-btn" data-type="mouth" data-value="astonished">Étonné</button>
+                <button id="mouth-eating" class="style-btn" data-type="mouth" data-value="eating">Manger</button>
+                <button id="mouth-laugh" class="style-btn" data-type="mouth" data-value="laugh">Rigoler</button>
+                <button id="mouth-tongue" class="style-btn" data-type="mouth" data-value="tongue">Langue</button>
              </div>
 
             <!-- Choix du cou -->
-             <div id="neck-style" class="style-panel hidden">
-                <button id="neck-default" data-type="neck" data-value="default">Default</button>
-                <button id="neck-bend-backward" data-type="neck" data-value="bend-backward">Penché en arrière</button>
-                <button id="neck-bend-forward" data-type="neck" data-value="bend-forward">Penché en avant</button>
-                <button id="neck-thick" data-type="neck" data-value="thick">Épais</button>
+             <div id="styles-neck" class="style-panel hidden">
+                <button id="neck-default" class="style-btn" data-type="neck" data-value="default">Default</button>
+                <button id="neck-bend-backward" class="style-btn" data-type="neck" data-value="bend-backward">Penché en arrière</button>
+                <button id="neck-bend-forward" class="style-btn" data-type="neck" data-value="bend-forward">Penché en avant</button>
+                <button id="neck-thick" class="style-btn" data-type="neck" data-value="thick">Épais</button>
              </div>
 
             <!-- Choix de la patte -->
-             <div id="leg-style" class="style-panel hidden">
-                <button id="leg-default" data-type="leg" data-value="default">Default</button>
-                <button id="leg-bubble-tea" data-type="leg" data-value="bubble-tea">Bubble-tea</button>
-                <button id="leg-cookie" data-type="leg" data-value="cookie">Cookie</button>
-                <button id="leg-game-console" data-type="leg" data-value="game-console">Console de jeu</button>
-                <button id="leg-tilt-backward" data-type="leg" data-value="tilt-backward">Penché en arrière</button>
-                <button id="leg-tilt-forward" data-type="leg" data-value="tilt-forward">Penché en avant</button>
+             <div id="styles-leg" class="style-panel hidden">
+                <button id="leg-default" class="style-btn" data-type="leg" data-value="default">Default</button>
+                <button id="leg-bubble-tea" class="style-btn" data-type="leg" data-value="bubble-tea">Bubble-tea</button>
+                <button id="leg-cookie" class="style-btn" data-type="leg" data-value="cookie">Cookie</button>
+                <button id="leg-game-console" class="style-btn" data-type="leg" data-value="game-console">Console de jeu</button>
+                <button id="leg-tilt-backward" class="style-btn" data-type="leg" data-value="tilt-backward">Penché en arrière</button>
+                <button id="leg-tilt-forward" class="style-btn" data-type="leg" data-value="tilt-forward">Penché en avant</button>
              </div>
 
             <!-- Choix des accessoires -->
-             <div id="accessories-style" class="style-panel-hidden">
-                <button id="accessories-earings" data-type="accessories" data-value="earings">Boucles d'oreilles</button>
-                <button id="accessories-flower" data-type="accessories" data-value="flower">Fleur</button>
-                <button id="glasses" data-type="accessories" data-value="glasses">Lunettes</button>
-                <button id="headphone" data-type="accessories" data-value="headphone">Casque</button>
+             <div id="styles-accessories" class="style-panel hidden">
+                <button id="accessories-none" class="style-btn" data-type="accessories" data-value="none">Aucun</button>
+                <button id="accessories-earings" class="style-btn" data-type="accessories" data-value="earings">Boucles d'oreilles</button>
+                <button id="accessories-flower" class="style-btn" data-type="accessories" data-value="flower">Fleur</button>
+                <button id="accessories-glasses" class="style-btn" data-type="accessories" data-value="glasses">Lunettes</button>
+                <button id="accessories-headphone" class="style-btn" data-type="accessories" data-value="headphone">Casque</button>
              </div>
 
             <!-- Choix de la couleur du fond -->
-             <div id="background-style" class="style-panel hidden">
-                <button id="background-style-blue50" data-type="background" data-value="blue50">
+             <div id="styles-backgrounds" class="style-panel hidden">
+                <button id="backgrounds-style-blue50" class="style-btn" data-type="backgrounds" data-value="blue50">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/blue50.png" alt="Bleu 50">
                 </button>
 
-                <button id="background-style-blue60" data-type="background" data-value="blue60">
+                <button id="backgrounds-style-blue60" class="style-btn" data-type="backgrounds" data-value="blue60">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/blue60.png" alt="Bleu 60">
                 </button>
 
-                <button id="background-style-blue70" data-type="background" data-value="blue70">
+                <button id="backgrounds-style-blue70" class="style-btn" data-type="backgrounds" data-value="blue70">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/blue70.png" alt="Bleu 70">
                 </button>
 
-                <button id="background-style-darkblue30" data-type="background" data-value="darkblue30">
+                <button id="backgrounds-style-darkblue30" class="style-btn" data-type="backgrounds" data-value="darkblue30">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/darkblue30.png" alt="Bleu Sombre 30">
                 </button>
 
-                <button id="background-style-darkblue50" data-type="background" data-value="darkblue50">
+                <button id="backgrounds-style-darkblue50" class="style-btn" data-type="backgrounds" data-value="darkblue50">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/darkblue50.png" alt="Bleu Sombre 50">
                 </button>
 
-                <button id="background-style-darkblue70" data-type="background" data-value="darkblue70">
+                <button id="backgrounds-style-darkblue70" class="style-btn" data-type="backgrounds" data-value="darkblue70">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/darkblue70.png" alt="Bleu Sombre 70">
                 </button>
 
-                <button id="background-style-green50" data-type="background" data-value="green50">
+                <button id="backgrounds-style-green50" class="style-btn" data-type="backgrounds" data-value="green50">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/green50.png" alt="Vert 50">
                 </button>
 
-                <button id="background-style-green60" data-type="background" data-value="green60">
+                <button id="backgrounds-style-green60" class="style-btn" data-type="backgrounds" data-value="green60">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/green60.png" alt="Vert 60">
                 </button>
 
-                <button id="background-style-green70" data-type="background" data-value="green70">
+                <button id="backgrounds-style-green70" class="style-btn" data-type="backgrounds" data-value="green70">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/green70.png" alt="Vert 70">
                 </button>
 
-                <button id="background-style-grey40" data-type="background" data-value="grey40">
+                <button id="backgrounds-style-grey40" class="style-btn" data-type="backgrounds" data-value="grey40">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/grey40.png" alt="Gris 40">
                 </button>
 
-                <button id="background-style-grey70" data-type="background" data-value="grey70">
+                <button id="backgrounds-style-grey70" class="style-btn" data-type="backgrounds" data-value="grey70">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/grey70.png" alt="Gris 70">
                 </button>
 
-                <button id="background-style-grey80" data-type="background" data-value="grey80">
+                <button id="backgrounds-style-grey80" class="style-btn" data-type="backgrounds" data-value="grey80">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/grey80.png" alt="Gris 80">
                 </button>
 
-                <button id="background-style-red50" data-type="background" data-value="red50">
+                <button id="backgrounds-style-red50" class="style-btn" data-type="backgrounds" data-value="red50">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/red50.png" alt="Rouge 50">
                 </button>
 
-                <button id="background-style-red60" data-type="background" data-value="red60">
+                <button id="backgrounds-style-red60" class="style-btn" data-type="backgrounds" data-value="red60">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/red60.png" alt="Rouge 60">
                 </button>
 
-                <button id="background-style-red70" data-type="background" data-value="red70">
+                <button id="backgrounds-style-red70" class="style-btn" data-type="backgrounds" data-value="red70">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/red70.png" alt="Rouge 70">
                 </button>
 
-                <button id="background-style-yellow50" data-type="background" data-value="yellow50">
+                <button id="backgrounds-style-yellow50" class="style-btn" data-type="backgrounds" data-value="yellow50">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/yellow50.png" alt="Jaune 50">
                 </button>
 
-                <button id="background-style-yellow60" data-type="background" data-value="yellow60">
+                <button id="backgrounds-style-yellow60" class="style-btn" data-type="backgrounds" data-value="yellow60">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/yellow60.png" alt="Jaune 60">
                 </button>
 
-                <button id="background-style-yellow70" data-type="background" data-value="yellow70">
+                <button id="backgrounds-style-yellow70" class="style-btn" data-type="backgrounds" data-value="yellow70">
                     <img src="alpaca-generator-assets/alpaca/backgrounds/yellow70.png" alt="Jaune 70">
                 </button>
              </div>
         </div>
     </body>
+
+    <script src="scripts.js"></script>
 </html>
