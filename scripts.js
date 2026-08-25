@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Récupération des éléments HTML
     const previewSection = document.getElementById('preview-section');
-    const backgroundImg = document.getElementById('background');
+    const backgroundImg = document.getElementById('backgrounds');
     const legImg = document.getElementById('img-leg');
     const noseImg = document.getElementById('img-nose');
     const mouthImg = document.getElementById('img-mouth');
