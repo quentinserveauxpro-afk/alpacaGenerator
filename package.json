@@ -1,0 +1,19 @@
+{
+    "name": "alpaca-generator",
+    "version": "1.0.0",
+    "description": "A generator for Alpaca models",
+    "main": "index.html",
+    "scripts": {
+        "start": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ken-ty",
+    "license": "ISC",
+    "dependencies": {
+        "@capacitor/android": "^8.5.0",
+        "@capacitor/core": "^8.5.0",
+        "@capacitor/ios": "^8.5.0"
+    },
+    "devDependencies": {
+        "@capacitor/cli": "^8.5.0"
+    }
+}

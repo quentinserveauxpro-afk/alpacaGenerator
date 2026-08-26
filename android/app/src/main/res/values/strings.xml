@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">alpacaGenerator</string>
+    <string name="title_activity_main">alpacaGenerator</string>
+    <string name="package_name">com.alpacaGenerator.app</string>
+    <string name="custom_url_scheme">com.alpacaGenerator.app</string>
+</resources>
