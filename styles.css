@@ -6,7 +6,7 @@
 
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #513afe 0%, #e73ea6 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -90,8 +90,9 @@ h1 {
 /* --- Boutons de catégories --- */
 #customization-buttons {
     display: flex;
+    height: 600px;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     min-width: 200px;
     padding: 20px;
     background: white;
@@ -124,9 +125,10 @@ h1 {
     transform: translateY(-2px);
 }
 
-/* --- Style des styles --- */
+/* --- Style des boutons de styles --- */
 #styles-section {
-    width: 100%;
+    display: block;
+    width: 60%;
     max-width: 1000px;
     padding: 30px;
     background: #fff;
@@ -134,6 +136,13 @@ h1 {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     margin-top: 20px;
     border: 2px solid #eee;
+}
+
+#styles-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
 }
 
 .style-btn {
@@ -162,4 +171,53 @@ h1 {
         width: 100%;
         max-width: 400px;
     }
+}
+
+/* --- Styles d'arrière-plan --- */
+#styles-backgrounds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Styles pour les boutons d'arrière-plan --- */
+#styles-backgrounds .style-btn img {
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: block;
+}
+
+/* --- Réduction de la taille des boutons --- */
+#styles-backgrounds .style-btn {
+    padding: 2px;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Animation pour les boutons d'arrière-plan --- */
+#styles-backgrounds .style-btn:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+    border-color: #6c5ce7;
+}
+
+/* --- Gestion d'alignement des sections de styles --- */
+.style-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
 }
