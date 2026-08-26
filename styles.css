@@ -4,9 +4,16 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #513afe 0%, #e73ea6 100%);
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,27 +21,30 @@ body {
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 50px;
 }
 
 /* --- Preview section --- */
 #alpaca-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
     margin-bottom: 30px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 #preview-section {
     width: 400px;
     height: 600px;
-
     position: relative;
     background-color: #4d5c64;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     overflow: hidden;
 }
 
@@ -82,4 +92,150 @@ h1 {
 
 .hidden {
     display: none;
+}
+
+/* --- Boutons de catégories --- */
+#customization-buttons {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 200px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#customization-buttons h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* --- Style des boutons de catégorie --- */
+.category-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c5ce7;
+    color: white;
+    font-size: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #1f0fce;
+    transform: translateY(-2px);
+}
+
+/* --- Style des boutons de styles --- */
+#styles-section {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    border: 2px solid #eee;
+}
+
+#styles-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.style-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.style-btn:hover {
+    background-color: #e2e8f0;
+    border-color: #6c5ce7;
+}
+
+.style-btn:active {
+    background-color: #d1d5db;
+    border-color: #6c5ce7;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
+    #alpaca-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #customization-buttons {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* --- Styles d'arrière-plan --- */
+#styles-backgrounds {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Styles pour les boutons d'arrière-plan --- */
+#styles-backgrounds .style-btn img {
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: block;
+}
+
+/* --- Réduction de la taille des boutons --- */
+#styles-backgrounds .style-btn {
+    padding: 2px;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+/* --- Animation pour les boutons d'arrière-plan --- */
+#styles-backgrounds .style-btn:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+    border-color: #6c5ce7;
+}
+
+#styles-backgrounds .style-btn:active {
+    transform: scale(0.95);
+    background-color: #e0e0e0;
+    border-color: #6c5ce7;
+}
+
+/* --- Gestion d'alignement des sections de styles --- */
+.style-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
 }
