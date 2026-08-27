@@ -19,6 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const stylePanels = document.querySelectorAll('.style-panel');
     const stylesSection = document.querySelectorAll('.style-btn');
 
+    // Bouton retour pour la version mobile
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+        // Cache tous les panneaux de style
+        stylePanels.forEach(panel => panel.classList.add('hidden'));
+        // Cache le titre des styles
+        document.getElementById('styles-section').classList.add('hidden');
+        // Affiche les boutons de personnalisation
+        document.getElementById('customization-buttons').style.display = 'flex';
+    });
+
     // Vérifier que nous avons bien trouvé des boutons (pour le débogage)
     console.log("Boutons trouvés :", customizationButtons.length);
 
@@ -40,6 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetPanel) {
                 styleTitle.classList.remove('hidden');
                 targetPanel.classList.remove('hidden');
+            }
+
+            if (window.innerWidth < 900) {
+                document.getElementById('customization-buttons').style.display = 'none';
             }
         });
     });
